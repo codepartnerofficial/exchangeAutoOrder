@@ -19,7 +19,7 @@ let increment = 0.01;
 
 var inerval = setInterval(() =>{
             createExchangeOrder()
-          }, 14000)
+          }, 10000)
 
   function createExchangeOrder(){
 
@@ -45,7 +45,7 @@ var inerval = setInterval(() =>{
             .post("http://localhost:3010/order/create_limit_exchange_order", orderData, {
               headers: {
                 xauth:
-                  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODA4NTkxMDcuODc4LCJkYXRhIjp7InVzZXJfaWQiOjE4fSwiaWF0IjoxNjc4MjY3MTA4fQ.VapWQC1amGppCA-ruBVWrsanfqCgBu2MnymT1VD9VYM",
+                  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODQzMDM1MTcuOTMyLCJkYXRhIjp7InVzZXJfaWQiOjY1fSwiaWF0IjoxNjgxNzExNTE3fQ.YzWq-hOOzC2XRml5Uun2JwE5ncdm2RMkd1PDfuyXfEc",
               },
             })
             .then((res) => {
