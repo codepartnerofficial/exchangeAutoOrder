@@ -1,17 +1,17 @@
-const EventEmitter = require('events');
+// const EventEmitter = require('events');
 
-const myEmitter = new EventEmitter();
-
-
-let count = 0;
+// const myEmitter = new EventEmitter();
 
 
-myEmitter.on('increment', () => {
-  count++;
-  console.log(`Count is now ${count}`);
-});
+// let count = 0;
 
 
-setInterval(() => {
-  myEmitter.emit('increment');
-}, 10000); 
+// myEmitter.on('increment', () => {
+//   count++;
+//   console.log(`Count is now ${count}`);
+// });
+
+
+// setInterval(() => {
+//   myEmitter.emit('increment');
+// }, 10000); 
