@@ -4,7 +4,7 @@ const axios = require("axios");
 var inerval = setInterval(() => {
   exchangeOrder(15, "bnb:usdt", 250, 0.1);
   // exchangeOrder(10,"usdt:bnb",0.004,0.000001)
-}, 5000);
+}, 45000);
 
 function exchangeOrder(buyAmount, currency, pricePerCoin, increment) {
   try {
