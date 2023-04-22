@@ -27,11 +27,13 @@ function exchangeOrder(buyAmount, currency, pricePerCoin, increment) {
             "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODQ0NzgwNjkuMzc3LCJkYXRhIjp7InVzZXJfaWQiOjY1fSwiaWF0IjoxNjgxODg2MDY5fQ.QdV_2U4qc1sxx3NB7F3BI-xxDY4f96DYdOKRlCg4nrA",
         },
       }
-    );
-  } catch (error) {}
-  .then((res) => {
-    console.log(res.data.data);
-  });
+    ).then((res) => {
+      console.log(res.data.data);
+    });;
+  } catch (error) {
+    console.log("345",error);
+  }
+
   // clearInterval(inerval)
   // if(increment >= 10 ) clearInterval(inerval)
 }
