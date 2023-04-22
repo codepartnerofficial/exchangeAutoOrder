@@ -7,7 +7,7 @@ var inerval = setInterval(() => {
   increment += 0.0001;
 
   // exchangeOrder(10,"usdt:bnb",0.004,0.000001)
-}, 5000);
+}, 45000);
 
 function exchangeOrder(buyAmount, currency, pricePerCoin, increment) {
   try {
