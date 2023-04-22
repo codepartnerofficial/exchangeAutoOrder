@@ -1,16 +1,18 @@
 const axios = require("axios");
 
 // let increment = 0.01;
+increment = 0.001
 var inerval = setInterval(() => {
-  exchangeOrder(15, "bnb:usdt", 250, 0.001);
+  exchangeOrder(15, "bnb:usdt", 250, increment);
+  increment += 0.0001;
+
   // exchangeOrder(10,"usdt:bnb",0.004,0.000001)
-}, 45000);
+}, 5000);
 
 function exchangeOrder(buyAmount, currency, pricePerCoin, increment) {
   try {
-    pricePerCoin = parseFloat((pricePerCoin - increment).toFixed(2));
-    const sellAmount = parseFloat((pricePerCoin * buyAmount).toFixed(2));
-    increment += 0.0001;
+    pricePerCoin = parseFloat((pricePerCoin - increment).toFixed(6));
+    const sellAmount = parseFloat((pricePerCoin * buyAmount).toFixed(6));
     const orderData = {
       type: "EXCHANGE",
       buyAmount,
@@ -18,6 +20,7 @@ function exchangeOrder(buyAmount, currency, pricePerCoin, increment) {
       currency,
       pricePerCoin,
     };
+    console.log(orderData);
     axios.post(
       "https://backend.useyourcrypto.org/order/create_limit_exchange_order",
       orderData,
