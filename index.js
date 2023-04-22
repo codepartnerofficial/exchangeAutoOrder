@@ -10,7 +10,7 @@ function exchangeOrder(buyAmount, currency, pricePerCoin, increment) {
   try {
     pricePerCoin = parseFloat((pricePerCoin - increment).toFixed(2));
     const sellAmount = parseFloat((pricePerCoin * buyAmount).toFixed(2));
-    // increment += 0.01;
+    increment += 0.01;
     const orderData = {
       type: "EXCHANGE",
       buyAmount,
@@ -29,9 +29,9 @@ function exchangeOrder(buyAmount, currency, pricePerCoin, increment) {
       }
     );
   } catch (error) {}
-  // .then((res) => {
-  //   // console.log(res.data.data);
-  // });
+  .then((res) => {
+    console.log(res.data.data);
+  });
   // clearInterval(inerval)
   // if(increment >= 10 ) clearInterval(inerval)
 }
